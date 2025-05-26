@@ -4,15 +4,10 @@ import matplotlib.pyplot as plt
 from datetime import date, datetime
 from joblib import load
 
-import os
-from joblib import load
 
-# Bu .py dosyasının bulunduğu dizini bulur
-current_dir = os.path.dirname(os.path.abspath(__file__))
 
-# .pkl dosyasını onun içinden yükler
-model_path = os.path.join(current_dir, "xgboost_model28.pkl")
-model = load(model_path)
+model = load("xgboost_model28.pkl")
+
 
 st.set_page_config(
     page_title="Hotel Cancellation Prediction Project",
